@@ -1,0 +1,11 @@
+{
+    "name": "hexlet/code",
+    "description": "first draft package",
+    "authors": [
+        {
+            "name": "Lusya1990",
+            "email": "lusya_suntsova1990@mail.ru"
+        }
+    ],
+    "require": {}
+}
