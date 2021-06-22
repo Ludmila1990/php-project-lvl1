@@ -1,5 +1,6 @@
 {
     "name": "hexlet/code",
+    "bin": ["bin/brain-games"],
     "type": "library",
     "description": "first draft package",
     "authors": [
