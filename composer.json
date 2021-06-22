@@ -1,5 +1,6 @@
 {
     "name": "hexlet/code",
+    "type": "library",
     "description": "first draft package",
     "authors": [
         {
@@ -7,5 +8,6 @@
             "email": "lusya_suntsova1990@mail.ru"
         }
     ],
+    "license": "MIT",
     "require": {}
 }
