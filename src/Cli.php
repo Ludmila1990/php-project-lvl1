@@ -10,4 +10,3 @@
     line("Hello, %s!", $name);
   }
 
-?>
