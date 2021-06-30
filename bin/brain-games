@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-namespace Php\Project\Lvl1\Cli;
+
 use function Brain\Games\Cli\greet;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
