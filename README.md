@@ -4,3 +4,5 @@
 [![lint](https://github.com/Ludmila1990/php-project-lvl1/actions/workflows/lint.yml/badge.svg)](https://github.com/Ludmila1990/php-project-lvl1/actions/workflows/lint.yml)  
 
 https://asciinema.org/a/LffVTGpIUxOmJ1Asx8fDW30bA  
+
+https://asciinema.org/a/QMWkQaVWZE2ZDPu7caG7tdK6p
