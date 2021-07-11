@@ -5,6 +5,7 @@ namespace Brain\Games\Cli;
 use function cli\line;
 use function cli\prompt;
 
+
 function greet()
 {
     line('Welcome to the Brain Games!');
@@ -84,5 +85,43 @@ Let's try again, {$name}!");
             line("Congratulations, {$name}!");
         }
     }
+}
+
+function gcd($a, $b)
+{
+    $large = $a > $b ? $a : $b;
+    $small = $a > $b ? $b : $a;
+    $remainder = $large % $small;
+    return $remainder == 0 ? $small : gcd($small, $remainder);
+}
+
+function findGcd()
+{
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    line('Find the greatest common divisor of given numbers.'); 
+    $i = 1;
+    $res = [];
+    while ($i <= 3) {   
+        $num1 = rand(1, 100);
+        $num2 = rand(1, 100);
+        $outputNumbers = "{$num1} {$num2}";
+        $question = line('Question: %s', $outputNumbers);
+        $answer = prompt('Your answer');
+        $correctAnswer = (string) gcd($num1, $num2);
+        if ($answer === $correctAnswer) {
+            line('Correct!'); 
+            $i++;
+            $res[] = $answer;
+        } else {
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!");
+            break;
+        }
+        if (count($res) === 3) {
+            line("Congratulations, {$name}!");
+        }
+        }
 }
 
