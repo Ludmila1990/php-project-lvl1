@@ -125,3 +125,56 @@ Let's try again, {$name}!");
         }
 }
 
+function progression($num) {
+    $step = rand(1, 10);
+    $res = [];
+    $endNum = $num + 9 * $step;
+    for ($i = $num; $i <= $endNum; $i += $step) {
+      $res[] = $i;
+    }
+    $keyRand = rand(0, 9);
+    $newValue = '..';
+    $result = [];
+    $findValue = '';
+    foreach ($res as $key => $value) {
+      if ($key === $keyRand) {
+        $findValue = $res[$key];
+        $result[$key] = $newValue;
+      }else {
+        $result[] = $value;
+      }
+    }
+   $string = implode(' ', $result);
+   return [$string, $findValue];
+}
+
+function getTheProgression()
+{
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    line('What number is missing in the progression?');
+    $i = 1;
+    $res = [];
+    while ($i <= 3) {
+        $progression = progression(rand(1, 100));
+        $outputProgression = $progression[0];
+        $correctAnswer = (string) $progression[1];
+        $question = line('Question: %s', $outputProgression);
+        $answerUser = prompt('Your answer');
+        if ($answerUser === $correctAnswer) {
+            line('Correct!'); 
+            $i++;
+            $res[] = $answerUser;
+        } else {
+            line("'{$answerUser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!");
+            break;
+        }
+        if (count($res) === 3) {
+            line("Congratulations, {$name}!");
+        }
+}
+
+}
+
