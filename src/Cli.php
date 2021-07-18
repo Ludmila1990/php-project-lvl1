@@ -178,3 +178,39 @@ Let's try again, {$name}!");
 
 }
 
+function isPrime($num) {
+    for ($i = 2; $i < $num; $i++) {
+      if ($num % $i === 0) {
+        return false;
+      } 
+    }
+    return true;
+}
+
+function checkPrime()
+{
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    line('Answer "yes" if given number is prime. Otherwise answer "no".');
+    $i = 1;
+    $res = [];
+    while ($i <= 3) {
+        $num = rand(1, 20);
+        $question = line("Question: %s", $num);
+        $answerUser = prompt('Your answer');
+        $correctAnswer = isPrime($num) ? 'yes' : 'no';
+        if ($answerUser === $correctAnswer) {
+            line('Correct!'); 
+            $i++;
+            $res[] = $answerUser;
+        } else {
+            line("'{$answerUser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.
+Let's try again, {$name}!");
+            break;
+        }
+        if (count($res) === 3) {
+            line("Congratulations, {$name}!");
+        }
+    }
+}
