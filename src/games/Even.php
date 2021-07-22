@@ -20,5 +20,3 @@ function play()
     };
     run(DESCRIPTION, $runGame);
 }
-
-?>

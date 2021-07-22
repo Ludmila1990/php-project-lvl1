@@ -20,10 +20,8 @@ function play()
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
         $question = "{$num1} {$num2}";
-        $correctAnswer = findGcd($num1, $num2); 
+        $correctAnswer = findGcd($num1, $num2);
         return [$question, (string) $correctAnswer];
     };
     run(DESCRIPTION, $runGame);
 }
-
-?>

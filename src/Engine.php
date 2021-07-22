@@ -11,14 +11,13 @@ function run($description, $runGame, $countRound = 3)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($description);
-    
     for ($i = 1; $i <= $countRound; $i++) {
         [$question, $correctAnswer] = $runGame();
         $questionMessage = line("Question: %s", $question);
         $answerUser = prompt('Your answer');
         if ($answerUser === $correctAnswer) {
             line('Correct!');
-        }else {
+        } else {
             line("'{$answerUser}' is wrong answer ;(. Correct answer was '{$correctAnswer}'. 
 Let's try again, {$name}!");
             return;
@@ -26,4 +25,3 @@ Let's try again, {$name}!");
     }
     line("Congratulations, {$name}!");
 }
-?>
