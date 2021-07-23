@@ -8,7 +8,7 @@
         "bin/brain-progression",
         "bin/brain-prime"
     ],
-    "type": "package",
+    "type": "project",
     "description": "Brain Games",
     "authors": [
         {
