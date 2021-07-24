@@ -6,7 +6,7 @@ use function BrainGames\Engine\run;
 
 const DESCRIPTION = "What number is missing in the progression?";
 
-function getTheProgression($num)
+function getTheProgression(int $num): array
 {
     $step = rand(1, 10);
     $res = [];
@@ -32,7 +32,7 @@ function getTheProgression($num)
 
 function play()
 {
-    $runGame = function () {
+    $runGame = function (): array {
         $progression = getTheProgression(rand(1, 100));
         $question = $progression[0];
         $correctAnswer = (string) $progression[1];

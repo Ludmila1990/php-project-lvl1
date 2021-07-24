@@ -8,7 +8,7 @@ const DESCRIPTION = "What is the result of the expression?";
 
 function play()
 {
-    $runGame = function () {
+    $runGame = function (): array {
         $num1 = rand(1, 20);
         $num2 = rand(1, 20);
         $operations = ['+', '-', '*'];
