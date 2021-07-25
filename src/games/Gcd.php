@@ -14,7 +14,7 @@ function findGcd(int $a, int $b): int
     return $remainder == 0 ? $small : findGcd($small, $remainder);
 }
 
-function play()
+function play(): void
 {
     $runGame = function (): array {
         $num1 = rand(1, 100);

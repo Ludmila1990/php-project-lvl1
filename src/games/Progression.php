@@ -30,7 +30,7 @@ function getTheProgression(int $num): array
     return [$string, $findValue];
 }
 
-function play()
+function play(): void
 {
     $runGame = function (): array {
         $progression = getTheProgression(rand(1, 100));

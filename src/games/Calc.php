@@ -6,7 +6,7 @@ use function BrainGames\Engine\run;
 
 const DESCRIPTION = "What is the result of the expression?";
 
-function play()
+function play(): void
 {
     $runGame = function (): array {
         $num1 = rand(1, 20);
